@@ -19,19 +19,25 @@
     };
   };
   services.fail2ban = {
+  enable = true;
+  maxretry = 5;
+  bantime = "1h";
+  
+  bantime-increment = {
     enable = true;
-    maxretry = 5;       # failed attempts before ban
-    bantime = "1h";     # how long the ban lasts
-    bantime-increment = {
-      enable = true;    # doubles ban duration on repeat offenders
-      multipliers = "2 4 8 16 32 64";
-      maxtime = "168h"; # caps at 1 week
-    };
-    jails.sshd = ''
-      enabled = true
-      port = 22
-      filter = sshd
-      maxretry = 3
-    '';
+    multipliers = "2 4 8 16 32 64";
+    maxtime = "168h";
   };
-}
+
+  # Use the attribute set (submodule) style instead of a string
+  jails.sshd = {
+    settings = {
+      enabled = true;
+      port = 22;
+      filter = "sshd";
+      maxretry = 3;
+      backend = "systemd";
+    };
+  };
+};
+  }

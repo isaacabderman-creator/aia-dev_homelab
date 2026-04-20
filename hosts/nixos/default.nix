@@ -26,6 +26,7 @@
     neovim
     wget
     dig
+    nixfmt
     cloudflared
     tree
     btop
