@@ -31,5 +31,7 @@
     btop
   ];
 
+  services.gnome.gnome-keyring.enable = true;
+
   system.stateVersion = "25.11";
 }
