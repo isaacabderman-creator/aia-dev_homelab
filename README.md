@@ -1,3 +1,4 @@
+![Build Status](https://github.com/isaacabderman-creator/aia-dev_homelab/actions/workflows/format.yml/badge.svg)
 # AIA DEV HOMELAB
 
 A NixOS config for my homeserver using Home Manager
