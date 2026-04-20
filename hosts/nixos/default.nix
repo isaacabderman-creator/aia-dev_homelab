@@ -12,6 +12,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   users.users.iai = {
     isNormalUser = true;
     description = "ANDRIANARIMANANA Isaac Abderman";
