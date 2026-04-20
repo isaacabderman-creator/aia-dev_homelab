@@ -6,6 +6,7 @@
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
+    github-copilot-cli
   ];
 
   programs.git = {
@@ -14,5 +15,9 @@
       name = "ANDRIANARIMANANA Isaac Abderman";
       email = "isaacabderman@gmail.com";
     };
+  };
+
+  services.gnome-keyring = {
+    enable = true;
   };
 }

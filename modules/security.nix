@@ -18,4 +18,8 @@
       group = "adguardhome";
     };
   };
+
+  services.gnome-keyring = {
+    enable = true;
+  };
 }
