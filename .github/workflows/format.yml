@@ -1,0 +1,17 @@
+name: System Build Check
+on: [push]
+
+jobs:
+  verify-config:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v25
+      
+      - name: Verify Format
+        run: nix run nixpkgs#nixpkgs-fmt -- --check .
+
+      - name: Verify Build Logic
+        run: |
+          # This checks if the configuration is valid without actually installing it
+          nix-instantiate --parse *.nix
