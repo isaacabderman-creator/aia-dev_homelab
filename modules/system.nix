@@ -31,6 +31,10 @@
     HandleLidSwitchDocked      = "ignore";
   };
 
+  programs.bash.shellAliases = {
+    rebuild = "sudo nixos-rebuild switch --flake ~/flake#nixos";
+  };
+
   systemd.sleep.extraConfig = ''
     AllowSuspend=no
     AllowHibernation=no
