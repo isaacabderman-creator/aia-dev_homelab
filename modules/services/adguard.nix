@@ -21,13 +21,13 @@
         server_name = "aiadev.dedyn.io";
         port_dns_over_tls = 853;
         certificate_path = "/var/lib/acme/aiadev.dedyn.io/cert.pem";
-        private_key_path  = "/var/lib/acme/aiadev.dedyn.io/key.pem";
+        private_key_path = "/var/lib/acme/aiadev.dedyn.io/key.pem";
       };
 
       filtering = {
         protection_enabled = true;
-        filtering_enabled  = true;
-        parental_enabled   = false;
+        filtering_enabled = true;
+        parental_enabled = false;
         safe_search.enabled = false;
       };
 

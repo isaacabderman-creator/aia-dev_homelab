@@ -20,7 +20,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  users.groups.adguardhome = {};
+  users.groups.adguardhome = { };
 
   environment.systemPackages = with pkgs; [
     neovim
