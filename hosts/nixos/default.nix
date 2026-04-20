@@ -33,6 +33,12 @@
     btop
   ];
 
+  nix.gc = {
+  automatic = true;
+  dates = "weekly";      
+  options = "--delete-older-than 30d";
+};
+
   services.gnome.gnome-keyring.enable = true;
 
   system.stateVersion = "25.11";
