@@ -21,11 +21,11 @@
     openssh.authorizedKeys.keys = ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMiAFsCmkR4YBF8v/RoC3cWdTKyYupafp9Cpqpcs+oJw victus"];
   };
 
-  users.groups.adguardhome = { };
 
   environment.systemPackages = with pkgs; [
     neovim
     wget
+    zip
     dig
     nixfmt
     cloudflared

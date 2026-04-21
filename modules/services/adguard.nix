@@ -43,6 +43,6 @@
   };
 
   systemd.services.adguardhome.serviceConfig = {
-    BindReadOnlyPaths = [ "/var/lib/acme/aiadev.dedyn.io" ];
+    BindPaths = [ "/var/lib/acme/aiadev.dedyn.io" ];
   };
 }
