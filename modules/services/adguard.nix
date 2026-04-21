@@ -6,6 +6,10 @@
     host = "0.0.0.0";
     port = 3000;
     settings = {
+      users = [{
+        name = "admin";
+        password = "$2b$05$t9uzefsyabUgU01aQfVpSelEBKWUIQTDuTpWMYtFHVA4AQc6INhtG";
+      }];
       dns = {
         upstream_dns = [
           "tls://dns.quad9.net"

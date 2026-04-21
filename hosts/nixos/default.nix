@@ -8,6 +8,7 @@
     ../../modules/security.nix
     ../../modules/services/adguard.nix
     ../../modules/services/ddclient.nix
+    ../../modules/services/cloudflared.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
