@@ -12,15 +12,22 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   users.users.iai = {
     isNormalUser = true;
     description = "ANDRIANARIMANANA Isaac Abderman";
-    extraGroups = [ "networkmanager" "wheel" ];
-    openssh.authorizedKeys.keys = ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMiAFsCmkR4YBF8v/RoC3cWdTKyYupafp9Cpqpcs+oJw victus"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMiAFsCmkR4YBF8v/RoC3cWdTKyYupafp9Cpqpcs+oJw victus"
+    ];
   };
-
 
   environment.systemPackages = with pkgs; [
     neovim
@@ -34,10 +41,10 @@
   ];
 
   nix.gc = {
-  automatic = true;
-  dates = "weekly";      
-  options = "--delete-older-than 30d";
-};
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
 
   services.gnome.gnome-keyring.enable = true;
 

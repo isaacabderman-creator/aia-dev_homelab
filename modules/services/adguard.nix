@@ -31,14 +31,20 @@
         safe_search.enabled = false;
       };
 
-      filters = map (url: { enabled = true; url = url; }) [
-        "https://adguardteam.github.io/HostlistsRegistry/assets/filter_9.txt"
-        "https://adguardteam.github.io/HostlistsRegistry/assets/filter_11.txt"
-        "https://adguardteam.github.io/HostlistsRegistry/assets/filter_3.txt"
-        "https://adguardteam.github.io/HostlistsRegistry/assets/filter_4.txt"
-        "https://adguardteam.github.io/HostlistsRegistry/assets/filter_27.txt"
-        "https://adguardteam.github.io/HostlistsRegistry/assets/filter_8.txt"
-      ];
+      filters =
+        map
+          (url: {
+            enabled = true;
+            url = url;
+          })
+          [
+            "https://adguardteam.github.io/HostlistsRegistry/assets/filter_9.txt"
+            "https://adguardteam.github.io/HostlistsRegistry/assets/filter_11.txt"
+            "https://adguardteam.github.io/HostlistsRegistry/assets/filter_3.txt"
+            "https://adguardteam.github.io/HostlistsRegistry/assets/filter_4.txt"
+            "https://adguardteam.github.io/HostlistsRegistry/assets/filter_27.txt"
+            "https://adguardteam.github.io/HostlistsRegistry/assets/filter_8.txt"
+          ];
     };
   };
 
