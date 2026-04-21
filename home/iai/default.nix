@@ -6,6 +6,7 @@
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
+    nixpkgs-fmt
     github-copilot-cli
   ];
 
