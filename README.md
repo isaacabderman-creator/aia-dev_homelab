@@ -7,7 +7,8 @@ A NixOS config for my homeserver using Home Manager
 
 - Static IP address
 - System suspension & sleep disabled
-- Dynamic DNS via deSEC
-- Ad filtering using AdGuard
-- DoT for all connections in the house if configuring it as private DNS (ISP cannot access traffic)
-- Parallel DNS request + caching for speed
+- Ad filtering using AdGuard Home (accessible at [dns.aialab.tech](https://dns.aialab.tech))
+- Parallel DNS requests + caching via Quad9 & Cloudflare upstreams
+- Cloudflare Tunnel — all public traffic proxied through Cloudflare, no ports exposed to the internet
+- SSH hardening — key-only auth, root login disabled
+- Modular Nix flake structure (`hosts/`, `modules/`, `home/`) with Home Manager integrated as a NixOS module
