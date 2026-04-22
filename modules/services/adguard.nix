@@ -3,6 +3,7 @@
 {
   services.adguardhome = {
     enable = true;
+    mutableSettings = false;
     host = "0.0.0.0";
     port = 3000;
     settings = {
@@ -11,6 +12,12 @@
         password = "$2y$05$DbLWZSxVAh1t.uITWs0ZNuV5v3Fde24kiITR8pxyHs8UYE8aLoW4W";
       }];
       dns = {
+        bootstrap_dns = [
+          "9.9.9.10"
+          "149.112.112.10"
+          "2620:fe::10"
+          "2620:fe::fe:10"
+        ];
         upstream_dns = [
           "tls://dns.quad9.net"
           "tls://1dot1dot1dot1.cloudflare-dns.com"
