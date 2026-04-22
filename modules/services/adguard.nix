@@ -19,7 +19,7 @@
         cache_size = 4194304;
         cache_ttl_min = 600;
       };
-      
+
       filtering = {
         protection_enabled = true;
         filtering_enabled = true;
