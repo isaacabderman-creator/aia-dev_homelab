@@ -8,7 +8,7 @@
     settings = {
       users = [{
         name = "admin";
-        password = "$2b$05$t9uzefsyabUgU01aQfVpSelEBKWUIQTDuTpWMYtFHVA4AQc6INhtG";
+        password = "$2y$05$DbLWZSxVAh1t.uITWs0ZNuV5v3Fde24kiITR8pxyHs8UYE8aLoW4W";
       }];
       dns = {
         upstream_dns = [

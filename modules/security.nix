@@ -10,16 +10,7 @@
     };
   };
 
-  security.acme = {
-    acceptTerms = true;
-    defaults.email = "isaacabderman@gmail.com";
-    certs."aiadev.dedyn.io" = {
-      dnsProvider = "desec";
-      environmentFile = "/etc/secrets/desec.env";
-      group = "adguardhome";
-    };
-  };
-  services.fail2ban = {
+    services.fail2ban = {
     enable = true;
     maxretry = 5;
     bantime = "1h";
