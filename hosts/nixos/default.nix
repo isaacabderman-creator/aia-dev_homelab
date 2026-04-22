@@ -7,7 +7,6 @@
     ../../modules/networking.nix
     ../../modules/security.nix
     ../../modules/services/adguard.nix
-    ../../modules/services/ddclient.nix
     ../../modules/services/cloudflared.nix
   ];
 

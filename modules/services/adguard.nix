@@ -19,15 +19,7 @@
         cache_size = 4194304;
         cache_ttl_min = 600;
       };
-
-      tls = {
-        enabled = true;
-        server_name = "aiadev.dedyn.io";
-        port_dns_over_tls = 853;
-        certificate_path = "/var/lib/acme/aiadev.dedyn.io/cert.pem";
-        private_key_path = "/var/lib/acme/aiadev.dedyn.io/key.pem";
-      };
-
+      
       filtering = {
         protection_enabled = true;
         filtering_enabled = true;
@@ -50,9 +42,5 @@
             "https://adguardteam.github.io/HostlistsRegistry/assets/filter_8.txt"
           ];
     };
-  };
-
-  systemd.services.adguardhome.serviceConfig = {
-    BindPaths = [ "/var/lib/acme/aiadev.dedyn.io" ];
   };
 }
