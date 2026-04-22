@@ -20,13 +20,6 @@
         cache_ttl_min = 600;
       };
 
-      tls = {
-        enabled = true;
-        server_name = "dns.aialab.tech";
-        force_https = false;
-        port_https = 3000;
-      };
-
       filtering = {
         protection_enabled = true;
         filtering_enabled = true;
