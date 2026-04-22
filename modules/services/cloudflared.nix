@@ -6,7 +6,7 @@
       "6bfacd18-076f-4aba-90f4-26d41e397d0d" = {
         credentialsFile = "/home/iai/.cloudflared/6bfacd18-076f-4aba-90f4-26d41e397d0d.json";
         ingress = {
-	  "ssh.aialab.tech" = "ssh://localhost:22";
+          "ssh.aialab.tech" = "ssh://localhost:22";
           "dns.aialab.tech" = "http://localhost:3000";
         };
         default = "http_status:404";

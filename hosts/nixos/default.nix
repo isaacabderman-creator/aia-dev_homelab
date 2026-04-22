@@ -8,6 +8,7 @@
     ../../modules/security.nix
     ../../modules/services/adguard.nix
     ../../modules/services/cloudflared.nix
+    ../../modules/services/tailscale.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
