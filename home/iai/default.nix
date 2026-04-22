@@ -16,6 +16,7 @@
       name = "ANDRIANARIMANANA Isaac Abderman";
       email = "isaacabderman@gmail.com";
     };
+    extraConfig.core.hooksPath = ".githooks";
   };
 
 }
