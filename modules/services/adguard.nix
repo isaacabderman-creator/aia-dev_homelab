@@ -56,17 +56,11 @@
     PrivateDevices = true;
     PrivateTmp = true;
     ProtectHome = true;
-    ProtectSystem = "strict";
+    ProtectSystem = "full";
     LockPersonality = true;
-    MemoryDenyWriteExecute = true;
     RestrictNamespaces = true;
     RestrictRealtime = true;
     RestrictSUIDSGID = true;
     SystemCallArchitectures = "native";
-    RestrictAddressFamilies = [
-      "AF_INET"
-      "AF_INET6"
-      "AF_UNIX"
-    ];
   };
 }
