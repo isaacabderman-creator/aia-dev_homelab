@@ -4,7 +4,7 @@
   services.adguardhome = {
     enable = true;
     mutableSettings = false;
-    host = "0.0.0.0";
+    host = "127.0.0.1";
     port = 3000;
     settings = {
       users = [{
@@ -49,5 +49,24 @@
             "https://adguardteam.github.io/HostlistsRegistry/assets/filter_8.txt"
           ];
     };
+  };
+
+  systemd.services.adguardhome.serviceConfig = {
+    NoNewPrivileges = true;
+    PrivateDevices = true;
+    PrivateTmp = true;
+    ProtectHome = true;
+    ProtectSystem = "strict";
+    LockPersonality = true;
+    MemoryDenyWriteExecute = true;
+    RestrictNamespaces = true;
+    RestrictRealtime = true;
+    RestrictSUIDSGID = true;
+    SystemCallArchitectures = "native";
+    RestrictAddressFamilies = [
+      "AF_INET"
+      "AF_INET6"
+      "AF_UNIX"
+    ];
   };
 }
