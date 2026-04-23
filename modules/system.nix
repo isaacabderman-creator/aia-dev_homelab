@@ -4,6 +4,7 @@
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
+  boot.loader.grub.configurationLimit = 20;
 
   time.timeZone = "Indian/Antananarivo";
 
@@ -33,6 +34,14 @@
 
   programs.bash.shellAliases = {
     rebuild = "sudo nixos-rebuild switch --flake ~/flake#nixos";
+  };
+
+  system.autoUpgrade = {
+    enable = true;
+    dates = "weekly";
+    flake = "/home/iai/flake#nixos";
+    allowReboot = false;
+    persistent = true;
   };
 
   systemd.sleep.extraConfig = ''

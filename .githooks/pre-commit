@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+nix run nixpkgs#nixpkgs-fmt -- .
+git add -u
