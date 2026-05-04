@@ -17,6 +17,9 @@
   programs.git = {
     enable = true;
     settings = {
+      init = {
+        defaultBranch = "main";
+      };
       user = {
         name = "ANDRIANARIMANANA Isaac Abderman";
         email = "isaacabderman@gmail.com";
