@@ -19,13 +19,21 @@
     "8.8.8.8"
     "1.1.1.1"
   ];
+  networking.firewall.trustedInterfaces = [ "enp3s0" ];
 
   networking.firewall = {
     enable = true;
     allowedTCPPorts = [
       22
       53
+      32001
+      8123
     ];
-    allowedUDPPorts = [ 53 ];
+    allowedUDPPorts = [
+      53
+      1900
+      5353
+    ];
+    checkReversePath = "loose";
   };
 }

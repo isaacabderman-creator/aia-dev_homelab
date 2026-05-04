@@ -9,6 +9,7 @@
     ../../modules/services/adguard.nix
     ../../modules/services/cloudflared.nix
     ../../modules/services/tailscale.nix
+    ../../modules/services/home-assistant.nix
   ];
 
   nixpkgs.config.allowUnfree = true;

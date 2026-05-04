@@ -1,4 +1,5 @@
 { ... }:
+
 {
   services.cloudflared = {
     enable = true;
@@ -7,6 +8,7 @@
         credentialsFile = "/var/lib/cloudflared/6bfacd18-076f-4aba-90f4-26d41e397d0d.json";
         ingress = {
           "adguard.aialab.tech" = "http://127.0.0.1:3000";
+          "home.aialab.tech" = "http://127.0.0.1:8123";
         };
         default = "http_status:404";
       };

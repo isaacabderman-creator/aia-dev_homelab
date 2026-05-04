@@ -6,8 +6,10 @@
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
+    nodejs
     nixpkgs-fmt
     tcpdump
+    traceroute
     unstable.github-copilot-cli
     gh
   ];

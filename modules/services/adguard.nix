@@ -7,11 +7,15 @@
     host = "127.0.0.1";
     port = 3000;
     settings = {
-      users = [{
-        name = "admin";
-        password = "$2y$05$DbLWZSxVAh1t.uITWs0ZNuV5v3Fde24kiITR8pxyHs8UYE8aLoW4W";
-      }];
+      users = [
+        {
+          name = "admin";
+          password = "$2y$05$DbLWZSxVAh1t.uITWs0ZNuV5v3Fde24kiITR8pxyHs8UYE8aLoW4W";
+        }
+      ];
       dns = {
+        bind_hosts = [ "0.0.0.0" ];
+        port = 53;
         bootstrap_dns = [
           "9.9.9.10"
           "149.112.112.10"
@@ -39,15 +43,14 @@
           (url: {
             enabled = true;
             url = url;
-          })
-          [
-            "https://adguardteam.github.io/HostlistsRegistry/assets/filter_9.txt"
-            "https://adguardteam.github.io/HostlistsRegistry/assets/filter_11.txt"
-            "https://adguardteam.github.io/HostlistsRegistry/assets/filter_3.txt"
-            "https://adguardteam.github.io/HostlistsRegistry/assets/filter_4.txt"
-            "https://adguardteam.github.io/HostlistsRegistry/assets/filter_27.txt"
-            "https://adguardteam.github.io/HostlistsRegistry/assets/filter_8.txt"
-          ];
+          }) [
+          "https://adguardteam.github.io/HostlistsRegistry/assets/filter_9.txt"
+          "https://adguardteam.github.io/HostlistsRegistry/assets/filter_11.txt"
+          "https://adguardteam.github.io/HostlistsRegistry/assets/filter_3.txt"
+          "https://adguardteam.github.io/HostlistsRegistry/assets/filter_4.txt"
+          "https://adguardteam.github.io/HostlistsRegistry/assets/filter_27.txt"
+          "https://adguardteam.github.io/HostlistsRegistry/assets/filter_8.txt"
+        ];
     };
   };
 
