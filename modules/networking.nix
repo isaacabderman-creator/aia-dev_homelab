@@ -36,4 +36,8 @@
     ];
     checkReversePath = "loose";
   };
+  systemd.network.links."10-enp3s0" = {
+    matchConfig.Name = "enp3s0";
+    linkConfig.GenericReceiveOffload = false;
+  };
 }

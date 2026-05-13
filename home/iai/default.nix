@@ -7,6 +7,7 @@
 
   home.packages = with pkgs; [
     nodejs
+    uv
     nixpkgs-fmt
     tcpdump
     traceroute
