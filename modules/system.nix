@@ -50,4 +50,6 @@
     AllowSuspendThenHibernate=no
     AllowHybridSleep=no
   '';
+
+  programs.nix-ld.enable = true;
 }
