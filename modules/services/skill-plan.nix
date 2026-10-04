@@ -24,4 +24,11 @@
       RestrictSUIDSGID = true;
     };
   };
+  security.sudo.extraRules = [{
+    users = [ "iai" ];
+    commands = [{
+      command = "/run/current-system/sw/bin/systemctl restart skill-plan";
+      options = [ "NOPASSWD" ];
+    }];
+  }];
 }
