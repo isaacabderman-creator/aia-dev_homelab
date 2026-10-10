@@ -59,7 +59,7 @@
     PrivateDevices = true;
     PrivateTmp = true;
     ProtectHome = true;
-    ProtectSystem = "full";
+    ProtectSystem = "strict";
     LockPersonality = true;
     RestrictNamespaces = true;
     RestrictRealtime = true;

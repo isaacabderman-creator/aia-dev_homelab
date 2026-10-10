@@ -18,11 +18,14 @@
       http = {
         server_port = 8123;
         use_x_forwarded_for = true;
+        # cloudflared connects from localhost; LAN hosts must not be able to
+        # spoof X-Forwarded-For.
         trusted_proxies = [
           "127.0.0.1"
           "::1"
-          "192.168.1.0/24"
         ];
+        ip_ban_enabled = true;
+        login_attempts_threshold = 5;
       };
     };
   };

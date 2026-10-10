@@ -17,11 +17,32 @@
       EnvironmentFile = "/home/iai/skill-plan.env";
       ExecStart = "${pkgs.nodejs_22}/bin/node server.js";
       Restart = "on-failure";
+      # The app runs as iai (it owns the tree, its SQLite db and the lessons it
+      # creates), but sees an empty /home except its own folder, so a compromise
+      # cannot read ~/.ssh, ~/.config (gh/copilot tokens) or ~/flake.
+      ProtectHome = "tmpfs";
+      BindPaths = [ "/home/iai/skill-plan" ];
+      ProtectSystem = "strict";
+      ReadWritePaths = [ "/home/iai/skill-plan" ];
       NoNewPrivileges = true;
       PrivateTmp = true;
-      ProtectSystem = "full";
+      PrivateDevices = true;
+      ProtectKernelTunables = true;
+      ProtectKernelModules = true;
+      ProtectKernelLogs = true;
+      ProtectControlGroups = true;
+      ProtectClock = true;
+      ProtectProc = "invisible";
+      ProcSubset = "pid";
+      CapabilityBoundingSet = "";
       LockPersonality = true;
       RestrictSUIDSGID = true;
+      RestrictRealtime = true;
+      RestrictNamespaces = true;
+      RestrictAddressFamilies = [ "AF_INET" "AF_INET6" "AF_UNIX" ];
+      SystemCallArchitectures = "native";
+      SystemCallFilter = [ "@system-service" "~@privileged" ];
+      # MemoryDenyWriteExecute stays off: V8's JIT needs writable+executable pages.
     };
   };
   security.sudo.extraRules = [{
