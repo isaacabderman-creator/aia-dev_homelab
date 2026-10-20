@@ -10,6 +10,8 @@
     ../../modules/services/cloudflared.nix
     ../../modules/services/tailscale.nix
     ../../modules/services/skill-plan.nix
+    ../../modules/services/settle.nix
+    ../../modules/services/settle-deploy.nix
     ../../modules/services/home-assistant.nix
   ];
 

@@ -57,7 +57,51 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-unstable": "nixpkgs-unstable"
+        "nixpkgs-unstable": "nixpkgs-unstable",
+        "settle-ai": "settle-ai",
+        "settle-backend": "settle-backend"
+      }
+    },
+    "settle-ai": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792497841,
+        "narHash": "sha256-0/ZyFZwIgoLY0j6kNJij0fJxCDD4jsfA3ZZpV5CgPdc=",
+        "ref": "main",
+        "rev": "9bee2ae4514c70a7ba9dc6a47ee3455dbc281d61",
+        "revCount": 14,
+        "type": "git",
+        "url": "file:///home/iai/settle-ai.git"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "file:///home/iai/settle-ai.git"
+      }
+    },
+    "settle-backend": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792498331,
+        "narHash": "sha256-yglXfn9Wg38Xh1Iu6ppgOdAT5DUKy6WwWhbiFIaqEXI=",
+        "ref": "main",
+        "rev": "5e76da11194730cee9f301a83a35ff998daf0813",
+        "revCount": 38,
+        "type": "git",
+        "url": "file:///home/iai/settle-backend.git"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "file:///home/iai/settle-backend.git"
       }
     }
   },

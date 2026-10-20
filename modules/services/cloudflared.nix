@@ -10,6 +10,7 @@
           "adguard.aialab.tech" = "http://127.0.0.1:3000";
           "home.aialab.tech" = "http://127.0.0.1:8123";
           "skill.aialab.tech" = "http://127.0.0.1:8000";
+          "api.aialab.tech" = "http://127.0.0.1:8080";
         };
         default = "http_status:404";
       };

@@ -9,9 +9,23 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Settle API, pushed from the laptop to the bare repo ~/settle-backend.git.
+    # Update with: nix flake update settle-backend
+    settle-backend = {
+      url = "git+file:///home/iai/settle-backend.git?ref=main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Settle AI service (internal, called by the API), pushed to the bare repo ~/settle-ai.git.
+    # Update with: nix flake update settle-ai
+    settle-ai = {
+      url = "git+file:///home/iai/settle-ai.git?ref=main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, settle-backend, settle-ai, ... }:
     let
       system = "x86_64-linux";
       unstable = import nixpkgs-unstable {
@@ -24,6 +38,8 @@
         inherit system;
         modules = [
           ./hosts/nixos/default.nix
+          settle-backend.nixosModules.default
+          settle-ai.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
